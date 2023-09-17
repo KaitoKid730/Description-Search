@@ -1,0 +1,154 @@
+*{
+  font-family: calibri;
+}
+
+html, body {
+  height:100%;
+  margin: 0;
+}
+
+.bg {
+  animation:slide 3s ease-in-out infinite alternate;
+  background-image: linear-gradient(-60deg, #660000 50%, #990000 50%); /* Dark red gradient */
+  bottom:0;
+  left:-50%;
+  opacity:.5;
+  position:fixed;
+  right:-50%;
+  top:0;
+  z-index:-1;
+}
+
+.bg2 {
+  animation-direction:alternate-reverse;
+  animation-duration:4s;
+}
+
+.bg3 {
+  animation-duration:5s;
+}
+
+.content {
+  text-align: center; /* Center align the content */
+  background-color: rgba(0,0,0,.7); /* Dark background with transparency */
+  border-radius: .5em;
+  box-shadow: 0 0 .5em rgba(0,0,0,.4);
+  box-sizing: border-box;
+  left: 50%;
+  max-width: 600px; /* Set a maximum width for better readability */
+  padding: 2em; /* Increase padding for better spacing */
+  position: fixed;
+  text-align: center;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%; /* Make it responsive */
+}
+
+h1 {
+  color: #fff; /* White text */
+  margin-bottom: 1em; /* Add some space below the heading */
+}
+
+.search-container {
+  display: inline-block; /* Make it an inline-block element */
+  width: 70%; /* Adjust width as needed */
+  max-width: 300px; /* Set a maximum width for responsiveness */
+  margin: 0 auto; /* Center the search bar */
+  text-align: left; /* Reset text alignment for search bar contents */
+}
+
+.search-container,
+.results-container {
+  background-color: rgba(255, 255, 255, 0.1); /* Semi-transparent white */
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow */
+  margin-bottom: 20px;
+}
+
+.results-container {
+  opacity: 80%;
+  background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white */
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow */
+  padding: 20px;
+  max-width: 400px; /* Set a maximum width for better readability */
+  margin: 0 auto; /* Center the results container */
+  text-align: left; /* Reset text alignment for result items */
+}
+
+.result-item {
+  margin-bottom: 20px; /* Add some space between result items */
+}
+
+.result-item h3 {
+  font-size: 18px;
+  margin-bottom: 8px; /* Add some space below term */
+}
+
+.result-item p {
+  font-size: 16px;
+  color: #333; /* Darken the text color */
+  margin-bottom: 10px; /* Add some space below definition */
+}
+
+.search-container {
+  width: 50%;
+  border: 2px solid #990000; /* Dark red outline */
+}
+
+.search-input {
+  width: calc(100% - 30px);
+  padding: 10px;
+  border: none;
+  font-size: 16px;
+  outline: none;
+  background: transparent;
+  color: #fff; /* White text */
+}
+
+.search-icon i {
+  font-size: 20px;
+  color: #fff; /* White icon */
+}
+
+.copy-button {
+  background: #990000; /* Dark red background */
+  color: #fff; /* White text */
+  border: none;
+  padding: 10px 20px; /* Adjust padding as needed */
+  border-radius: 5px; /* Add some border-radius for rounded corners */
+  font-size: 16px; /* Set the font size */
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.copy-button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #660000; /* Darkened dark red */
+  transform-origin: top right;
+  transform: scaleX(0);
+  z-index: -1;
+  transition: transform 0.3s ease;
+}
+
+.copy-button:hover::before {
+  transform-origin: top left;
+  transform: scaleX(1);
+}
+
+@keyframes slide {
+  0% {
+    transform:translateX(-25%);
+  }
+  100% {
+    transform:translateX(25%);
+  }
+}
