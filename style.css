@@ -1,38 +1,38 @@
-*{
-  font-family: calibri;
+* {
+  font-family: Calibri;
 }
 
 html, body {
-  height:100%;
+  height: 100%;
   margin: 0;
 }
 
 .bg {
-  animation:slide 3s ease-in-out infinite alternate;
-  background-image: linear-gradient(-60deg, #660000 50%, #990000 50%); /* Dark red gradient */
-  bottom:0;
-  left:-50%;
-  opacity:.5;
-  position:fixed;
-  right:-50%;
-  top:0;
-  z-index:-1;
+  animation: slide 3s ease-in-out infinite alternate;
+  background-image: linear-gradient(-60deg, #003366 50%, #005599 50%); /* Futuristic Blue Gradient */
+  bottom: 0;
+  left: -50%;
+  opacity: .7;
+  position: fixed;
+  right: -50%;
+  top: 0;
+  z-index: -1;
 }
 
 .bg2 {
-  animation-direction:alternate-reverse;
-  animation-duration:4s;
+  animation-direction: alternate-reverse;
+  animation-duration: 4s;
 }
 
 .bg3 {
-  animation-duration:5s;
+  animation-duration: 5s;
 }
 
 .content {
   text-align: center; /* Center align the content */
-  background-color: rgba(0,0,0,.7); /* Dark background with transparency */
+  background-color: rgba(0, 51, 102, 0.9); /* Dark futuristic blue background with transparency */
   border-radius: .5em;
-  box-shadow: 0 0 .5em rgba(0,0,0,.4);
+  box-shadow: 0 0 .5em rgba(0, 0, 102, .4);
   box-sizing: border-box;
   left: 50%;
   max-width: 600px; /* Set a maximum width for better readability */
@@ -59,18 +59,18 @@ h1 {
 
 .search-container,
 .results-container {
-  background-color: rgba(255, 255, 255, 0.1); /* Semi-transparent white */
+  background-color: rgba(255, 255, 255, .1); /* Semi-transparent white */
   border-radius: 10px;
   padding: 20px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, .1); /* Soft shadow */
   margin-bottom: 20px;
 }
 
 .results-container {
   opacity: 80%;
-  background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white */
+  background-color: rgba(255, 255, 255, .9); /* Semi-transparent white */
   border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, .1); /* Soft shadow */
   padding: 20px;
   max-width: 400px; /* Set a maximum width for better readability */
   margin: 0 auto; /* Center the results container */
@@ -94,7 +94,7 @@ h1 {
 
 .search-container {
   width: 50%;
-  border: 2px solid #990000; /* Dark red outline */
+  border: 2px solid #005599; /* Dark blue outline */
 }
 
 .search-input {
@@ -113,7 +113,7 @@ h1 {
 }
 
 .copy-button {
-  background: #990000; /* Dark red background */
+  background: #005599; /* Dark futuristic blue background */
   color: #fff; /* White text */
   border: none;
   padding: 10px 20px; /* Adjust padding as needed */
@@ -132,7 +132,7 @@ h1 {
   left: 0;
   width: 100%;
   height: 100%;
-  background: #660000; /* Darkened dark red */
+  background: #003366; /* Dark futuristic blue for glow effect */
   transform-origin: top right;
   transform: scaleX(0);
   z-index: -1;
@@ -142,13 +142,14 @@ h1 {
 .copy-button:hover::before {
   transform-origin: top left;
   transform: scaleX(1);
+  box-shadow: 0 0 20px rgba(255, 255, 255, .8); /* Outer glow on hover */
 }
 
 @keyframes slide {
   0% {
-    transform:translateX(-25%);
+    transform: translateX(-25%);
   }
   100% {
-    transform:translateX(25%);
+    transform: translateX(25%);
   }
 }
